@@ -21,12 +21,21 @@ export class InputsComponent {
   ];
   inputSelectedValue = (this.operations)[0];
 
+  systems = [
+    "2",
+    "8",
+    "10",
+    "16"
+  ];
+  inputSelectedValueSystem = (this.systems)[0];
+
   emitCalcData() {
     this.inputNum2 = this.inputNum2;
     const calcData: CalcData = {
       num1: this.inputNum1,
       num2: this.inputNum2,
-      selectedValue: this.inputSelectedValue
+      selectedValue: this.inputSelectedValue,
+      system: this.inputSelectedValueSystem
     };
 
     this.calcDataEvent.emit(calcData);

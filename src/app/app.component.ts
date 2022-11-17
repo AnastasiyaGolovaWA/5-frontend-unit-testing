@@ -21,19 +21,19 @@ export class AppComponent {
   calc(calcData: CalcData) {
     switch (calcData.selectedValue) {
       case (this.operations)[0]: {
-        this.appService.addition(calcData.num1, calcData.num2, '2').subscribe(res => { this.num3 = res })
+        this.appService.addition(calcData.num1, calcData.num2, calcData.system).subscribe(res => { this.num3 = res })
         break;
       }
       case (this.operations)[1]: {
-        this.appService.subtraction(calcData.num1, calcData.num2, '2').subscribe(res => { this.num3 = res })
+        this.appService.subtraction(calcData.num1, calcData.num2, calcData.system).subscribe(res => { this.num3 = res })
         break;
       }
       case (this.operations)[2]: {
-        this.appService.division(calcData.num1, calcData.num2, '2').subscribe(res => { this.num3 = res })
+        this.appService.division(calcData.num1, calcData.num2, calcData.system).subscribe(res => { this.num3 = res })
         break;
       }
       case (this.operations)[3]: {
-        this.appService.multiplication(calcData.num1, calcData.num2, '2').subscribe(res => { this.num3 = res })
+        this.appService.multiplication(calcData.num1, calcData.num2, calcData.system).subscribe(res => { this.num3 = res })
         break;
       }
     }
@@ -44,4 +44,5 @@ export interface CalcData {
   num1: string;
   num2: string;
   selectedValue: string;
+  system: string;
 }

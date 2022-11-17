@@ -1,3 +1,9 @@
+<label>Система счисления </label>
+<select [(ngModel)]="inputSelectedValueSystem" id="operationSystem">
+  <option *ngFor="let s of systems" [ngValue]="s">{{s}}</option>
+</select>
+<br>
+<br>
 <label>Первое число </label>
 <input [(ngModel)]="inputNum1" id="input1" name="inputNum1" type="number">
 <br>
@@ -27,4 +33,5 @@ else {
 <br>
 
 <button (click)="emitCalcData()" id="calcButton">Расчитать</button>
+<br>
 <br>
