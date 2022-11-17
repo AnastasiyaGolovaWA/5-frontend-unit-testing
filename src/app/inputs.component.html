@@ -1,11 +1,17 @@
 <label>Система счисления </label>
-<select [(ngModel)]="inputSelectedValueSystem" id="operationSystem">
-  <option *ngFor="let s of systems" [ngValue]="s">{{s}}</option>
+<select
+class="custom-select mb-3"
+(change)="changeSystem($event)"
+>
+<option value="">Система счисления</option>
+<option *ngFor="let s of System">
+  {{ s }}
+</option>
 </select>
 <br>
 <br>
 <label>Первое число </label>
-<input [(ngModel)]="inputNum1" id="input1" name="inputNum1" type="number">
+<input [(ngModel)]="inputNum1" id="input1" name="inputNum1" type="text" (keypress)="keyPress($event, getPatternParam())">
 <br>
 <br>
 
