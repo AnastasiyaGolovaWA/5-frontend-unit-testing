@@ -1,8 +1,8 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
-import {AppComponent} from './app.component';
-import {InputsComponent} from "./inputs.component";
-import {RedblackgreenDirective} from "./redblackgreen.directive";
-import {RoundingPipe} from "./rounding.pipe";
+import {AppComponent} from '../app.component';
+import {InputsComponent} from "../shared/input/inputs.component";
+import {RedblackgreenDirective} from "../shared/directive/redblackgreen.directive";
+import {RoundingPipe} from "../pipe/rounding.pipe";
 import {By} from "@angular/platform-browser";
 
 describe('InputsComponent', () => {

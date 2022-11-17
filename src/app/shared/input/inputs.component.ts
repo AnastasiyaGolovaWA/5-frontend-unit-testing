@@ -1,10 +1,9 @@
 import { Component, EventEmitter, Output } from '@angular/core';
-import { CalcData } from "./app.component";
+import { CalcData } from "../../app.component";
 
 @Component({
   selector: 'inputs',
-  templateUrl: './inputs.component.html',
-  styleUrls: ['./app.component.css']
+  templateUrl: './inputs.component.html'
 })
 
 export class InputsComponent {

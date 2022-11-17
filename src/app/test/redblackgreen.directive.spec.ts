@@ -1,5 +1,5 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
-import {RedblackgreenDirective} from "./redblackgreen.directive";
+import {RedblackgreenDirective} from "../shared/directive/redblackgreen.directive";
 import {By} from "@angular/platform-browser";
 import {Component} from "@angular/core";
 

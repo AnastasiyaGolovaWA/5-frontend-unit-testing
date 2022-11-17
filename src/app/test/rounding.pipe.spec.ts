@@ -1,4 +1,4 @@
-import {RoundingPipe} from "./rounding.pipe";
+import {RoundingPipe} from "../pipe/rounding.pipe";
 
 describe('RoundingPipe', () => {
 
