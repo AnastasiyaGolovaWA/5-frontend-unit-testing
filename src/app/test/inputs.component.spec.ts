@@ -24,15 +24,6 @@ describe('InputsComponent', () => {
     inpFixt.detectChanges();
   });
 
-  it('ввод букв в input 1', () => {
-    const input1 = inpFixt.debugElement.query(By.css('#input1'));
-    input1.nativeElement.value = 'qwerty';
-
-    input1.nativeElement.dispatchEvent(new Event('input'));
-    inpFixt.detectChanges();
-
-    expect(input1.nativeElement.value).toBe('');
-  });
 
   it('ввод числа 100 в input 1', () => {
     const input1 = inpFixt.debugElement.query(By.css('#input1'));
