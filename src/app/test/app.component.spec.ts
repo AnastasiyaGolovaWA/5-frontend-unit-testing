@@ -26,9 +26,10 @@ describe('AppComponent', () => {
 
   it('сложение 41 + 19 = 60', () => {
     const calcData: CalcData = {
-      num1: 41,
-      num2: 19,
-      selectedValue: "Сложить"
+      num1: '41',
+      num2: '19',
+      selectedValue: "Сложить",
+      system: '10'
     };
 
     appComp.calc(calcData)
@@ -38,9 +39,10 @@ describe('AppComponent', () => {
 
   it('вычитание -92 - 93 = 1', () => {
     const calcData: CalcData = {
-      num1: -92,
-      num2: 93,
-      selectedValue: "Вычесть"
+      num1: '-92',
+      num2: '93',
+      selectedValue: "Вычесть",
+      system: '10'
     };
 
     appComp.calc(calcData)
@@ -50,9 +52,10 @@ describe('AppComponent', () => {
 
   it('умножение 52 * 54 = 2808', () => {
     const calcData: CalcData = {
-      num1: 52,
-      num2: 54,
-      selectedValue: "Умножить"
+      num1: '52',
+      num2: '54',
+      selectedValue: "Умножить",
+      system: '10'
     };
 
     appComp.calc(calcData)
@@ -62,9 +65,10 @@ describe('AppComponent', () => {
 
   it('деление 74 / 2 = 37', () => {
     const calcData: CalcData = {
-      num1: 74,
-      num2: 2,
-      selectedValue: "Поделить"
+      num1: '74',
+      num2: '2',
+      selectedValue: "Поделить",
+      system: '10'
     };
 
     appComp.calc(calcData)
