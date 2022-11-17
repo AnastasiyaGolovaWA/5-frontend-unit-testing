@@ -22,7 +22,7 @@ class="custom-select mb-3"
 <br>
 
 <label>Второе число </label>
-<input [(ngModel)]="inputNum2" id="input2" name="inputNum2" oninput='var e = document.getElementById("operationSelector");
+<input [(ngModel)]="inputNum2" (keypress)="keyPress($event, getPatternParam())" id="input2" name="inputNum2" oninput='var e = document.getElementById("operationSelector");
 var text = e.options[e.selectedIndex].text;
 if (text.localeCompare("Поделить") === 0)
 {
