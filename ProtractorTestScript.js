@@ -67,4 +67,11 @@ describe("Запуск приложения", function () {
     expect(element(by.css("#input2")).getAttribute("value")).toEqual("");
   });
 
+  it('Невозможно ввести 0 во второй ввод при операции деления', () => {
+    element(by.css("#system")).sendKeys("10");
+    element(by.css("#operationSelector")).sendKeys("Поделить");
+    element(by.css("#input2")).click().clear().sendKeys("0");
+    expect(element(by.css("#input2")).getAttribute("value")).toEqual("");
+  });
+
 });
