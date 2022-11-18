@@ -79,4 +79,38 @@ describe("Запуск приложения", function () {
     element(by.css("#input1")).click().clear().sendKeys("F4A30");
     expect(element(by.css("#input1")).getAttribute("value")).toEqual("F4A30");
   });
+
+  it("Зелёный фон при ответе положительном числе (1 + 1 > 0)", () => {
+    element(by.css("#system")).sendKeys("10");
+    element(by.css("#input1")).click().clear().sendKeys("1");
+    element(by.css("#operationSelector")).sendKeys("Сложить");
+    element(by.css("#input2")).click().clear().sendKeys("1");
+    element(by.css("#calcButton")).click();
+    expect(element(by.css("#input3")).getAttribute("style")).toEqual(
+      "background-color: green;"
+    );
+  });
+
+  it("Чёрный фон при ответе нуле (0 + 0 = 0)", () => {
+    element(by.css("#system")).sendKeys("10");
+    element(by.css("#input1")).click().clear().sendKeys("0");
+    element(by.css("#operationSelector")).sendKeys("Сложить");
+    element(by.css("#input2")).click().clear().sendKeys("0");
+    element(by.css("#calcButton")).click();
+    expect(element(by.css("#input3")).getAttribute("style")).toEqual(
+      "background-color: black;"
+    );
+  });
+
+  it("Красный фон при отрицательном ответе (1 - 5) < 0", () => {
+    element(by.css("#system")).sendKeys("10");
+    element(by.css("#input1")).click().clear().sendKeys("1");
+    element(by.css("#operationSelector")).sendKeys("Вычесть");
+    element(by.css("#input2")).click().clear().sendKeys("5");
+    element(by.css("#calcButton")).click();
+    expect(element(by.css("#input3")).getAttribute("style")).toEqual(
+      "background-color: red;"
+    );
+  });
+
 });
