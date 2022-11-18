@@ -1,5 +1,7 @@
 # Lab5
 
+http://localhost:4444/wd/hub/static/resource/hub.html
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.13.
 
 ## Development server
