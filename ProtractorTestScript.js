@@ -18,4 +18,14 @@ describe("Запуск приложения", function () {
   it('Существует кнопка расчёта', () => {
     expect(element(by.css('#calcButton')).isDisplayed()).toBe(true);
   });
+
+  it('Корректный ответ сложения 41 + 19 = 60', () => {
+    element(by.css('#system')).sendKeys('10');
+    element(by.css('#input1')).click().clear().sendKeys('41');
+    element(by.css('#operationSelector')).sendKeys('Сложить');
+    element(by.css('#input2')).click().clear().sendKeys('19');
+    element(by.css('#calcButton')).click();
+    expect(element(by.css('#input3')).getAttribute('value')).toEqual('60');
+  });
+
 });
