@@ -6,6 +6,6 @@ describe("My first non angular class", function () {
     browser.driver.get("http://localhost:4200/");
   });
   it("Существует первое окно ввода", () => {
-    element(by.css('#input1')).sendKeys('6');
+    expect(element(by.css('#input1')).isDisplayed()).toBe(true);
   });
 });
