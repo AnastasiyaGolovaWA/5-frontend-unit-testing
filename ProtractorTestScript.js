@@ -55,4 +55,16 @@ describe("Запуск приложения", function () {
     expect(element(by.css("#input3")).getAttribute("value")).toEqual("37");
   });
 
+  it('Пустая строка при вводе букв в ввод 1', () => {
+    element(by.css("#system")).sendKeys("10");
+    element(by.css("#input1")).click().clear().sendKeys("йцукен");
+    expect(element(by.css("#input1")).getAttribute("value")).toEqual("");
+  });
+
+  it('Пустая строка при вводе букв в ввод 2', () => {
+    element(by.css("#system")).sendKeys("10");
+    element(by.css("#input2")).click().clear().sendKeys("йцукен");
+    expect(element(by.css("#input2")).getAttribute("value")).toEqual("");
+  });
+
 });
