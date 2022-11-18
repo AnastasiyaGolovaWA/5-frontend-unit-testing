@@ -46,7 +46,7 @@ describe("Запуск приложения", function () {
     expect(element(by.css("#input3")).getAttribute("value")).toEqual("2808");
   });
 
-  it('Корректный ответ деления 74 : 2 = 37', () => {
+  it("Корректный ответ деления 74 : 2 = 37", () => {
     element(by.css("#system")).sendKeys("10");
     element(by.css("#input1")).click().clear().sendKeys("74");
     element(by.css("#operationSelector")).sendKeys("Поделить");
@@ -55,23 +55,28 @@ describe("Запуск приложения", function () {
     expect(element(by.css("#input3")).getAttribute("value")).toEqual("37");
   });
 
-  it('Пустая строка при вводе букв в ввод 1', () => {
+  it("Пустая строка при вводе букв в ввод 1", () => {
     element(by.css("#system")).sendKeys("10");
     element(by.css("#input1")).click().clear().sendKeys("йцукен");
     expect(element(by.css("#input1")).getAttribute("value")).toEqual("");
   });
 
-  it('Пустая строка при вводе букв в ввод 2', () => {
+  it("Пустая строка при вводе букв в ввод 2", () => {
     element(by.css("#system")).sendKeys("10");
     element(by.css("#input2")).click().clear().sendKeys("йцукен");
     expect(element(by.css("#input2")).getAttribute("value")).toEqual("");
   });
 
-  it('Невозможно ввести 0 во второй ввод при операции деления', () => {
+  it("Невозможно ввести 0 во второй ввод при операции деления", () => {
     element(by.css("#system")).sendKeys("10");
     element(by.css("#operationSelector")).sendKeys("Поделить");
     element(by.css("#input2")).click().clear().sendKeys("0");
     expect(element(by.css("#input2")).getAttribute("value")).toEqual("");
   });
 
+  it("Проверка введения букв в 16 системе счисления", () => {
+    element(by.css("#system")).sendKeys("16");
+    element(by.css("#input1")).click().clear().sendKeys("F4A30");
+    expect(element(by.css("#input1")).getAttribute("value")).toEqual("F4A30");
+  });
 });
